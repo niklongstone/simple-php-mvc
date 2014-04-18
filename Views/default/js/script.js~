@@ -1,0 +1,40 @@
+$(document).ready(function() {
+    $("#btnSearch").click(function() {
+        var outcode = $('#where').val(); 
+        $.ajax({
+            url: 'index.php/restaurantsList/' + outcode,
+            beforeSend: function() {
+                $("#result").html('Loading...');
+            }
+        })
+        .done(function(data) {
+            $("#result").html('');
+            $("#result").append(data);
+	    prodButton();
+        })
+        .fail(function() {
+            alert( "error loading content please retry" );
+        })
+    });
+
+});  
+
+function prodButton() {
+    $(".prodBtn").click(function() {
+	var currentBtn = $(this);
+	var restaurantId = currentBtn.attr('rel');
+        $.ajax({
+            url: 'index.php/productsList/' + restaurantId,
+            beforeSend: function() {		
+                currentBtn.html('Loading...');
+            }
+        })
+        .done(function(data) {
+	    currentBtn.html('');
+            currentBtn.append(data);
+        })
+        .fail(function() {
+            alert( "error loading content please retry" );
+        })
+    });
+}

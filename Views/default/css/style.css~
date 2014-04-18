@@ -1,0 +1,46 @@
+body {
+	background: url(//dy3erx8o0a6nh.cloudfront.net/images/bg_texture.png) top left repeat #d7d2be;
+}
+
+.search-takeaways-large {
+    background-image: url(//dy3erx8o0a6nh.cloudfront.net/images/search_panel_background.png);
+}
+
+.postcode {
+    width: 200px;
+}
+.ctaButtonHome {
+    background-position: 0 -48px, right top;
+}
+
+.rcontainer {
+    text-align:center;
+    width:100%;
+}
+.restaurantData {
+    text-align:left;
+    margin: auto;
+    width: 960px;
+    height: 120px;
+}
+
+.restaurantElement {
+    width:192px;
+    float:left;   
+}
+.restaurantHeader {
+    font-weight: bold;  
+    text-align:left;
+    margin: auto;
+    margin-top: 50px;
+    width: 960px;
+    height: 50px;
+}
+
+.prodBtn {
+    cursor: pointer;
+}
+.prodList {
+    width: 960px;
+    margin: auto;
+}
